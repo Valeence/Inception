@@ -40,8 +40,8 @@ services:
       - /home/vandre/data/mysql:/var/lib/mysql
     networks:
       - inception
-    expose:
-      - "3306"
+    ports:
+      - "3306:3306"
     restart: always
 
 networks:

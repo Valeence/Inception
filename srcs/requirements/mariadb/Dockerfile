@@ -4,7 +4,6 @@ RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y mariadb-client mariadb-server && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Correction des permissions
 RUN mkdir -p /var/lib/mysql /run/mysqld && \
     chown -R mysql:mysql /var/lib/mysql /run/mysqld && \
     chmod 777 /tmp
